@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-11-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-11-0 http://www.eiffel.com/developers/xml/configuration-1-11-0.xsd" name="group_09_deidcated_server" uuid="A584BF05-242A-4904-A5B2-902ABD728187">
+	<target name="group_09_deidcated_server">
+		<root class="G09_DEDICATED_SERVER" feature="make"/>
+		<option warning="true" full_class_checking="false" is_attached_by_default="false" void_safety="none" syntax="provisional">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="console_application" value="true"/>
+		<setting name="concurrency" value="thread"/>
+		<precompile name="base-mt_precompile" location="$ISE_PRECOMP\base-mt.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<library name="gobo_kernel" location="$ISE_LIBRARY\library\gobo\gobo_kernel.ecf"/>
+		<library name="gobo_regexp" location="$ISE_LIBRARY\library\gobo\gobo_regexp.ecf"/>
+		<library name="net" location="$ISE_LIBRARY\library\net\net.ecf"/>
+		<library name="testing" location="$ISE_LIBRARY\library\testing\testing.ecf"/>
+		<library name="thread" location="$ISE_LIBRARY\library\thread\thread.ecf"/>
+		<library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
+		<library name="vision2" location="$ISE_LIBRARY\library\vision2\vision2.ecf" readonly="true"/>
+		<cluster name="group_09_deidcated_server" location=".\">
+			<file_rule>
+				<exclude>/EIFGENs$</exclude>
+				<exclude>/CVS$</exclude>
+				<exclude>/g09_launcher.e</exclude>
+				<exclude>/.svn$</exclude>
+			</file_rule>
+			<cluster name="network" location=".\network\" recursive="true"/>
+			<cluster name="logic" location=".\logic\" recursive="true"/>
+			<cluster name="ai" location=".\ai\" recursive="true"/>
+		</cluster>
+		<cluster name="helpers" location=".\gui\helpers\"/>
+	</target>
+</system>
